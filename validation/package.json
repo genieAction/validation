@@ -1,6 +1,6 @@
 {
   "name": "@itaytur/validation",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "validate objects and values by user requirments",
   "main": "index.js",
   "scripts": {
