@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/genieAction/validation/issues"
   },
-  "homepage": "https://github.com/genieAction/validation#readme"
+  "homepage": "https://github.com/genieAction/validation#readme",
+  "dependencies": {
+    "validator": "^13.1.1"
+  }
 }
