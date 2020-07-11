@@ -1,0 +1,15 @@
+{
+  "name": "@itaytur/validation",
+  "version": "1.0.2",
+  "description": "validate objects and values by user requirments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "validation"
+  },
+  "author": "itay tur",
+  "license": "ISC"
+}
