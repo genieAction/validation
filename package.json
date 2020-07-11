@@ -1,15 +1,19 @@
 {
   "name": "@itaytur/validation",
-  "version": "1.0.6",
-  "description": "validate objects and values by user requirments",
+  "version": "1.0.7",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"No test specified\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "validation"
+    "url": "git+https://github.com/genieAction/validation.git"
   },
   "author": "itay tur",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/genieAction/validation/issues"
+  },
+  "homepage": "https://github.com/genieAction/validation#readme"
 }
