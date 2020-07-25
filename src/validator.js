@@ -22,6 +22,7 @@ const validateObject = (obj, validations) => {
         const value = obj[property]
         const test = validation[property]
         isValid = isValid && tests[test](value, validation.options)
+        if (!isValid) break;
     }
     return isValid
 }
