@@ -1,10 +1,13 @@
 {
   "name": "@itaytur/validation",
+  "np": {
+    "tests": false
+  },
   "version": "1.0.13",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",

@@ -14,7 +14,8 @@ const tests = {
     [validationTypes.IS_CREDIT_CARD]: value => validator.isCreditCard(value),
     [validationTypes.IS_URL]: (value) => validator.isURL(value),
     [validationTypes.IS_URLS]: values => values.every(value => validator.isURL(value)),
-    [validationTypes.IS_WORDS]: value => value.split(' ').every(word => validator.isAlpha(word))
+    [validationTypes.IS_WORDS]: value => value.split(' ').every(word => validator.isAlpha(word)),
+    [validationTypes.IS_REQUIRED]: value => value != null
 }
 
 const isValidObject = (obj, validations, alloweds) => {
@@ -27,13 +28,9 @@ const isValidObject = (obj, validations, alloweds) => {
         const value = obj[property]
         const test = validation[property]
         let isValid = true
-        try {
-            if (value) isValid = tests[test](value, validation.options)
-            else if (test === validationTypes.IS_NOT_EMPTY) isValid = false
-            if (!isValid) return false;
-        } catch (error) {
-            console.log(error)
-        }
+        if (value) isValid = tests[test](value, validation.options)
+        else if (test === validationTypes.IS_REQUIRED) isValid = false
+        if (!isValid) return false;
     }
     return true;
 }

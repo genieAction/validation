@@ -18,6 +18,7 @@ it('should return true on a valid object', () => {
 
     const userValidations = [
         {name: validationTypes.IS_LETTERS_ONLY},
+        {name: validationTypes.IS_REQUIRED},
         {lastName: validationTypes.IS_LETTERS_ONLY},
         {phone: validationTypes.IS_MOBILE_PHONE},
         {email: validationTypes.IS_EMAIL},
