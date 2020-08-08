@@ -7,12 +7,12 @@ const sanitizers = {
 }
 
 const sanitize = (obj, objSanitizers) => {
-    const objToReturn = {...obj}
-    for ( let objSanitizer of objSanitizers) {
+    const objToReturn = { ...obj }
+    for (let objSanitizer of objSanitizers) {
         const property = Object.keys(objSanitizer)[0]
         const senitizer = objSanitizer[property]
         const value = objToReturn[property]
-        objToReturn[property] = sanitizers[senitizer](value)
+        if (value) objToReturn[property] = sanitizers[senitizer](value)
     }
     return objToReturn
 }

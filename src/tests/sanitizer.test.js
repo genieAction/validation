@@ -6,7 +6,8 @@ it('should sanitize the user object', () => {
     const name = '  Itay Tur  '
     const user = {
         email,
-        name
+        name,
+        address: 'tel aviv'
     }
 
     const userSanitizers = [

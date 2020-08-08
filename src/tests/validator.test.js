@@ -1,5 +1,5 @@
 const isValidObject = require('../validator/validator')
-const validationTypes =  require('../validator/validationTypes')
+const validationTypes = require('../validator/validationTypes')
 
 it('should return true on a valid object', () => {
     const user = {
@@ -17,15 +17,15 @@ it('should return true on a valid object', () => {
     }
 
     const userValidations = [
-        {name: validationTypes.IS_LETTERS_ONLY},
-        {name: validationTypes.IS_REQUIRED},
-        {lastName: validationTypes.IS_LETTERS_ONLY},
-        {phone: validationTypes.IS_MOBILE_PHONE},
-        {email: validationTypes.IS_EMAIL},
-        {credit: validationTypes.IS_CREDIT_CARD},
-        {city: validationTypes.IS_WORDS},
-        {img: validationTypes.IS_URL},
-        {images: validationTypes.IS_URLS}
+        { name: validationTypes.IS_LETTERS_ONLY },
+        { name: validationTypes.IS_REQUIRED },
+        { lastName: validationTypes.IS_LETTERS_ONLY },
+        { phone: validationTypes.IS_MOBILE_PHONE },
+        { email: validationTypes.IS_EMAIL },
+        { credit: validationTypes.IS_CREDIT_CARD },
+        { city: validationTypes.IS_WORDS },
+        { img: validationTypes.IS_URL },
+        { images: validationTypes.IS_URLS }
     ]
 
     const alloweds = Object.keys(user)
