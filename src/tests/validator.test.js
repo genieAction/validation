@@ -13,7 +13,8 @@ it('should return true on a valid object', () => {
         images: [
             'https://homepagehttpss.cae.wisc.edu/~ece533/images/airplane.png',
             'https://homepagehttpss.cae.wisc.edu/~ece533/images/airplane.png'
-        ]
+        ],
+        date: '2023-07-15'
     }
 
     const userValidations = [
@@ -25,7 +26,9 @@ it('should return true on a valid object', () => {
         { credit: validationTypes.IS_CREDIT_CARD },
         { city: validationTypes.IS_WORDS },
         { img: validationTypes.IS_URL },
-        { images: validationTypes.IS_URLS }
+        { images: validationTypes.IS_URLS },
+        { date: validationTypes.IS_DATE },
+        { date: validationTypes.IS_AFTER, options: { beforeTime: '2022-07-15'} },
     ]
 
     const alloweds = Object.keys(user)

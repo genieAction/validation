@@ -12,6 +12,7 @@ const IS_CREDIT_CARD = 'IS_CREDIT_CARD'
 const IS_URL = 'IS_URL'
 const IS_URLS = 'IS_URL_ARRAY'
 const IS_WORDS = 'IS_WORDS'
+const IS_AFTER = 'IS_AFTER'
 
 module.exports = {
     IS_EMAIL,
@@ -27,5 +28,6 @@ module.exports = {
     IS_CREDIT_CARD,
     IS_URL,
     IS_URLS,
-    IS_WORDS
+    IS_WORDS,
+    IS_AFTER
 }
