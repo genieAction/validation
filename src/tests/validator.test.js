@@ -39,14 +39,14 @@ it('should return true on a valid object', () => {
 
 it('Should return true on a valid value', () => {
     const email = 'itay@gmail.com'
-    const validations = [validationTypes.IS_EMAIL]
+    const validations = [{ type: validationTypes.IS_EMAIL }]
     const isValid = isValidValue(email, validations)
     expect(isValid).toBe(true)
 })
 
 it('Should return false on a invalid value', () => {
     const name = '1234'
-    const validations = [validationTypes.IS_LETTERS_ONLY]
+    const validations = [{ type: validationTypes.IS_LETTERS_ONLY }]
     const isValid = isValidValue(name, validations)
     expect(isValid).toBe(false)
 })
