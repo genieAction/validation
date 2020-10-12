@@ -36,4 +36,14 @@ const isValidObject = (obj, validations, alloweds) => {
     return true;
 }
 
-module.exports = isValidObject
+const isValidValue = (value, validations) => {
+    for (let validation of validations) {
+        if (!tests[validation](value, validation.options)) return false
+    }
+    return true
+}
+
+module.exports = {
+    isValidObject,
+    isValidValue
+}

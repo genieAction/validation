@@ -1,4 +1,4 @@
-const isValidObject = require('../validator/validator')
+const { isValidObject, isValidValue } = require('../validator/validator')
 const validationTypes = require('../validator/validationTypes')
 
 it('should return true on a valid object', () => {
@@ -28,7 +28,7 @@ it('should return true on a valid object', () => {
         { img: validationTypes.IS_URL },
         { images: validationTypes.IS_URLS },
         { date: validationTypes.IS_DATE },
-        { date: validationTypes.IS_AFTER, options: { beforeTime: '2022-07-15'} },
+        { date: validationTypes.IS_AFTER, options: { beforeTime: '2022-07-15' } },
     ]
 
     const alloweds = Object.keys(user)
@@ -36,3 +36,17 @@ it('should return true on a valid object', () => {
     const isValid = isValidObject(user, userValidations, alloweds)
     expect(isValid).toBe(true)
 });
+
+it('Should return true on a valid value', () => {
+    const email = 'itay@gmail.com'
+    const validations = [validationTypes.IS_EMAIL]
+    const isValid = isValidValue(email, validations)
+    expect(isValid).toBe(true)
+})
+
+it('Should return false on a invalid value', () => {
+    const name = '1234'
+    const validations = [validationTypes.IS_LETTERS_ONLY]
+    const isValid = isValidValue(name, validations)
+    expect(isValid).toBe(false)
+})
