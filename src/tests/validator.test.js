@@ -50,3 +50,10 @@ it('Should return false on a invalid value', () => {
     const isValid = isValidValue(name, validations)
     expect(isValid).toBe(false)
 })
+
+it('Should return false on a invalid on empty and required value', () => {
+    const name = ''
+    const validations = [{ type: validationTypes.IS_REQUIRED }]
+    const isValid = isValidValue(name, validations)
+    expect(isValid).toBe(false)
+})
