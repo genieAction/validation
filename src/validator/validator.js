@@ -15,8 +15,9 @@ const tests = {
     [validationTypes.IS_URL]: (value) => validator.isURL(value),
     [validationTypes.IS_URLS]: values => values.every(value => validator.isURL(value)),
     [validationTypes.IS_WORDS]: value => value.split(' ').every(word => validator.isAlpha(word)),
-    [validationTypes.IS_REQUIRED]: value => value,
-    [validationTypes.IS_AFTER]: (value, { beforeTime }) => new Date(value) > new Date(beforeTime)
+    [validationTypes.IS_REQUIRED]: value => value != null,
+    [validationTypes.IS_AFTER]: (value, { beforeTime }) => new Date(value) > new Date(beforeTime),
+    [validationTypes.isISO8601]: value => validator.isISO8601(value)
 }
 
 const isValidObject = (obj, validations, alloweds) => {
