@@ -17,7 +17,8 @@ const tests = {
     [validationTypes.IS_WORDS]: value => value.split(' ').every(word => validator.isAlpha(word)),
     [validationTypes.IS_REQUIRED]: value => value != null,
     [validationTypes.IS_AFTER]: (value, { beforeTime }) => new Date(value) > new Date(beforeTime),
-    [validationTypes.isISO8601]: value => validator.isISO8601(value)
+    [validationTypes.isISO8601]: value => validator.isISO8601(value),
+    [validationTypes.IS_UNIX_TIME]: value => validator.isDate(new Date(value)),
 }
 
 const isValidObject = (obj, validations, alloweds) => {

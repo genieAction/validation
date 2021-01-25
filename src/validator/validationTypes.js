@@ -14,6 +14,8 @@ const IS_URLS = 'IS_URL_ARRAY'
 const IS_WORDS = 'IS_WORDS'
 const IS_AFTER = 'IS_AFTER'
 const isISO8601 = 'isISO8601'
+const IS_UNIX_TIME = 'IS_UNIX_TIME'
+
 module.exports = {
     IS_EMAIL,
     IS_LETTERS_ONLY,
@@ -30,5 +32,6 @@ module.exports = {
     IS_URLS,
     IS_WORDS,
     IS_AFTER,
-    isISO8601
+    isISO8601,
+    IS_UNIX_TIME
 }
