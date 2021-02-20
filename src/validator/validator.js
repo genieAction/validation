@@ -40,7 +40,11 @@ const isValidObject = (obj, validations, alloweds) => {
 
 const isValidValue = (value, validations) => {
     for (let validation of validations) {
-        if (!tests[validation.type](value, validation.options)) return false
+        if (
+            value && !tests[validation.type](value, validation.options) ||
+            !value && validation.type === validationTypes.IS_REQUIRED
+        )
+            return false
     }
     return true
 }
